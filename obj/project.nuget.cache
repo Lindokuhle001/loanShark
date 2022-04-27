@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Lc5d2M1xvRWNOWlQQSFhlrQ2b2qdTCh0BYsYu9tXHG4JJzMQmQ5U5i1dxXKEuxz9JWng2E9dt7xpQ0txMl0pNg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bbdnet2639\\Documents\\loanShark\\loanShark.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bbdnet2639\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\bbdnet2639\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\bbdnet2639\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\bbdnet2639\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\bbdnet2639\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\bbdnet2639\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
