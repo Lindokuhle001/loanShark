@@ -1,8 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using loanShark;
 using System.Data.SqlClient;
-
-using Commander;
+using loanShark.Table;
 namespace loanShark.Controllers;
 [ApiController]
 [Route("/transactions")]
@@ -31,25 +30,13 @@ public class loanSharkController : ControllerBase
     //     return int.Parse(reader[0].ToString());
     // }
 
-    // [Produces("application/json")]
-    // [HttpPost]
-    // public SqlCommand PostTransaction([FromBody] Command transactionData)
-    // {
-    //     var com = transactionData;
-    //     Console.WriteLine(transactionData.FirstName);
-    //     SqlCommand command;
-    //     string connectionString = "Data Source=localhost;Initial Catalog=loanShark;User ID=shark;Password=pass";
-
-    //     var connection = new SqlConnection(connectionString);
-    //     connection.Open();
-
-    //     string sql = "INSERT INTO transactions(FirstName,LastName,PhysicalAddress,PhoneNumber,Amount) VALUES('lindokuhle','shabalala', '25 st street',0123456789,5000)";
-
-
-    //     Console.Write("connected");
-    //     command = new SqlCommand(sql, connection);
-    //     return command;
-    // }
+    [Produces("application/json")]
+    [HttpPost]
+    public string Post([FromBody] loanShark.Table.Transactions transactionData)
+    {
+        var postedData = transactionData;
+        return loanShark.Query.PostTransaction(postedData);
+    }
 
     // [HttpPut]
     // public string UpdateTransaction([FromBody] Command updateTransaction)
