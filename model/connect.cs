@@ -35,21 +35,23 @@ class program
     public static Dictionary<string,string> getTransactions()
     {
         SqlCommand command;
-        string connectionString = "Data Source=localhost;Initial Catalog=constructionDB;User ID=user;Password=pass";
-        string sql = "SELECT TeamID,TeamName FROM AvalableTeams";
+        string connectionString = "Data Source=localhost;Initial Catalog=loanShark;User ID=shark;Password=pass";
+        string sql = "SELECT * FROM Transactions";
         var connection = new SqlConnection(connectionString);
 
-        // string result = "";
         Dictionary<string,string> result = new Dictionary<string,string>();
-        // di
         connection.Open();
         Console.Write("connected");
         command = new SqlCommand(sql, connection);
         var reader = command.ExecuteReader();
         while (reader.Read())
         {
-            result.Add($"{reader["TeamID"]}",$"{reader["TeamName"]}");
-            // += $"{reader["TeamID"]}, {reader["TeamName"]}";
+            result.Add("transactionID",$"{reader["transactionID"]}");
+            result.Add("FirstName",$"{reader["FirstName"]}");
+            result.Add("LastName",$"{reader["LastName"]}");
+            result.Add("PhysicalAddress",$"{reader["PhysicalAddress"]}");
+            result.Add("PhoneNumber",$"{reader["PhoneNumber"]}");
+            result.Add("Amount",$"{reader["Amount"]}");
         }
 
         return result;
@@ -57,19 +59,7 @@ class program
     }
     public static string getT()
     {
-        // SqlCommand command;
-        // string connectionString = "Data Source=localhost;Initial Catalog=constructionDB;User ID=user;Password=pass";
-        // string sql = "SELECT TeamID,TeamName FROM AvalableTeams";
-        // var connection = new SqlConnection(connectionString);
 
-        // string result = "";
-        // connection.Open();
-        // Console.Write("connected");
-        // command = new SqlCommand(sql, connection);
-        // var reader = command.ExecuteReader();
-        // while (reader.Read())
-        // {
-        //     result += $"{reader["TeamID"]}, {reader["TeamName"]}";
         // }
 
         return "result";
