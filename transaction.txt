@@ -1,0 +1,12 @@
+1 lindo shabalala 25 st street 123456789 5000,0000 
+2 lindokuhle shabalala 25 st street 123456789 5000,0000 
+3 lindokuhle shabalala 25 st street 123456789 5000,0000 
+4 lindokuhle shabalala 25 st street 123456789 5000,0000 
+5 lindokuhle shabalala 25 st street 123456789 5000,0000 
+6 lindokuhle shabalala 25 st street 123456789 5000,0000 
+7 lindokuhle shabalala 25 st street 123456789 5000,0000 
+8 lindo shabalala 25 st street 123456789 5000,0000 
+9 lindo shabalala 25 st street 123456789 5000,0000 
+10 lindo shabalala 25 st street 123456789 5000,0000 
+11 lindo shabalala 25 st street 123456789 5000,0000 
+12 string string string string 20,0000 

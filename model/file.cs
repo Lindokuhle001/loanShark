@@ -2,7 +2,7 @@ namespace loanShark.File
 {
     public class FileIO
     {
-        public static string path = "../transaction.txt";
+        public static string path = "transaction.txt";
 
         //save to file
         public static void SaveToFile(string data)
