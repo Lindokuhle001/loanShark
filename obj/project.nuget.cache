@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SZKAFVB0ObKKlNzlIkcWfOxCxlxtsbMH7pRPvkpgA/cylWxjuUPR09ynqW8wM0TBQbAjr/KENGx/UMNU/7lzIQ==",
+  "dgSpecHash": "WT8EMdQY+PqoPzTWtxi2PnkWWHqtrpuX0h/VsHcyxqPZcBgGqb+XlPbjGJ4bwT6noIfmcrlFH/KeK3xOkqa+PQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\bbdnet2639\\Documents\\loanShark\\loanShark.csproj",
   "expectedPackageFiles": [
@@ -17,8 +17,11 @@
     "C:\\Users\\bbdnet2639\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "C:\\Users\\bbdnet2639\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Users\\bbdnet2639\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\bbdnet2639\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\bbdnet2639\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\bbdnet2639\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\bbdnet2639\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\bbdnet2639\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\bbdnet2639\\.nuget\\packages\\system.text.json\\6.0.3\\system.text.json.6.0.3.nupkg.sha512"
   ],
   "logs": []
 }
