@@ -1,8 +1,8 @@
 using System;
 
-namespace Commander
+namespace loanShark.Table
 {
-    public class Command
+    public class Transactions
     {
 
         public string FirstName { get; set; }

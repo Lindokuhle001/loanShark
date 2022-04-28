@@ -20,7 +20,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-app.MapGet("/numTransactions",()=> new loanShark.Controllers.loanSharkController().GetCount());
+// app.MapGet("/numTransactions",()=> new loanShark.Controllers.loanSharkController().GetCount());
 app.MapControllers();
 
 app.Run();
