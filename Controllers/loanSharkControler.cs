@@ -14,21 +14,6 @@ public class loanSharkController : ControllerBase
         return loanShark.Query.getTransactions();
     }
 
-    // [HttpGet]
-    // public int GetCount()
-    // {
-    //     SqlCommand command;
-    //     string connectionString = "Data Source=localhost;Initial Catalog=loanShark;User ID=shark;Password=pass";
-    //     string sql = "SELECT COUNT(*) FROM Transactions";
-    //     var connection = new SqlConnection(connectionString);
-
-    //     Dictionary<string,string> result = new Dictionary<string,string>();
-    //     connection.Open();
-    //     Console.Write("connected");
-    //     command = new SqlCommand(sql, connection);
-    //     var reader = command.ExecuteReader();
-    //     return int.Parse(reader[0].ToString());
-    // }
 
     [Produces("application/json")]
     [HttpPost]
@@ -42,7 +27,7 @@ public class loanSharkController : ControllerBase
     public string Put([FromBody] loanShark.Table.Transactions transactionData, int transactionID)
     {
         var postedData = transactionData;
-        return loanShark.Query.UpdateTransaction(transactionData,transactionID);
+        return loanShark.Query.UpdateTransaction(transactionData, transactionID);
     }
 
     [HttpDelete("/{transactionID}")]
@@ -51,7 +36,7 @@ public class loanSharkController : ControllerBase
         return loanShark.Query.deleteTransaction(transactionID);
     }
 
-    
+
 
 
 
@@ -67,5 +52,46 @@ public class CountController : ControllerBase
         return loanShark.Query.GetCount();
     }
 
+}
+
+[ApiController]
+[Route("/createFile")]
+public class FileController : ControllerBase
+{
+
+//     [HttpGet]
+//     public int Get()
+//     {
+
+//         try
+//         {
+
+//         }
+//             }
+
+//         catch (Exception ex)
+// {
+//     Console.WriteLine(ex.ToString());
+
+// }
 
 }
+
+// app.MapGet("/WriteToFile", async(InternContext db) =>
+// {
+//         try
+//         {
+//             List<Intern> interns = await db.Interns.ToListAsync();
+//             using StreamWriter file = new("Interns.pdf");
+//             foreach (Intern person in interns)
+//             {
+//                 await file.WriteLineAsync(person.FirstName + " " + person.LastName + " " + person.YearOfInternship);
+//             }
+//         }
+//         catch (Exception err)
+//         {
+//             Console.WriteLine("Error Message is " + err.Message);
+//         }
+
+// });
+// public DbSet<Intern> Interns => Set<Intern>()
