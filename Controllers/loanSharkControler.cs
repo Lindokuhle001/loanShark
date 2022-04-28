@@ -10,7 +10,9 @@ public class loanSharkController : ControllerBase
 
     [HttpGet]
     public string Get()
-
+    {
+        return loanShark.Query.getTransactions();
+    }
 
 
     [Produces("application/json")]
@@ -61,8 +63,8 @@ public class FileController : ControllerBase
     // public  SaveToFile(){
     public void Get()
     {
-
-        loanShark.File.FileIO.SaveToFile(loanShark.Query.getTransactions());
+        
+        loanShark.File.FileIO.SaveToFile(loanShark.Query.getTransactions()) ;
         // Console.WriteLine(loanShark.Query.getTransactions());
     }
     // }

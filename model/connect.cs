@@ -7,27 +7,41 @@ class Query
 {
     public static string ConnectToDB(string sql)
     {
-        string sqlResult = "";
-        var connection = new SqlConnection("Data Source=localhost;Initial Catalog=loanShark;User ID=shark;Password=pass;");
-        connection.Open();
-        Console.WriteLine($"*\n{connection.Database} Successfully Opened\n***");
-        var reader = new SqlCommand(sql, connection).ExecuteReader();
-        while (reader.Read())
+        try
         {
-            for (int i = 0; i < reader.FieldCount; i++)
+            string sqlResult = "";
+            SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=loanShark;User ID=shark;Password=pass;");
+            connection.Open();
+            SqlDataReader reader = new SqlCommand(sql, connection).ExecuteReader();
+            while (reader.Read())
             {
-                sqlResult += $"{reader[i]} ";
+                for (int i = 0; i < reader.FieldCount; i++)
+                {
+                    sqlResult += $"{reader[i]} ";
+                }
+                sqlResult += "\n";
             }
-            sqlResult += "\n";
+            connection.Close();
+            return sqlResult;
         }
-        return sqlResult;
+        catch (System.Exception)
+        {
+
+            throw new Exception("there was an error please try again");
+        }
+
+
     }
     public static string getTransactions()
     {
-        // SqlCommand command;
-        // string connectionString = "Data Source=localhost;Initial Catalog=loanShark;User ID=shark;Password=pass";
+
         string sql = "SELECT * FROM Transactions";
         var result = ConnectToDB(sql);
+
+        return result;
+
+
+
         // var connection = new SqlConnection(connectionString);
 
         // connection.Open();
@@ -46,7 +60,7 @@ class Query
         //     result.Add("Amount",$"{reader["Amount"]}");
         // }
 
-        return result;
+
 
     }
     public static int GetCount()
@@ -69,7 +83,7 @@ class Query
 
     }
 
-        public static string deleteTransaction( int transactionID)
+    public static string deleteTransaction(int transactionID)
     {
         string sql = $"DELETE FROM transactions where transactionID={transactionID}";
         return ConnectToDB(sql);
