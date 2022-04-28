@@ -38,39 +38,18 @@ public class loanSharkController : ControllerBase
         return loanShark.Query.PostTransaction(postedData);
     }
 
-    // [HttpPut]
-    // public string UpdateTransaction([FromBody] Command updateTransaction)
-    // {
-    //     var com = updateTransaction;
-    //     // Console.WriteLine(updateTransaction.name);
-    //     SqlCommand command;
-    //     string connectionString = "Data Source=localhost;Initial Catalog=constructionDB;User ID=user;Password=pass";
-    //     string sql = "UPDATE transactions set FirstName=shabalala where transactionID";
-    //     var connection = new SqlConnection(connectionString);
+    [HttpPut]
+    public string Put([FromBody] loanShark.Table.Transactions transactionData, int transactionID)
+    {
+        var postedData = transactionData;
+        return loanShark.Query.UpdateTransaction(transactionData,transactionID);
+    }
 
-
-    //     connection.Open();
-    //     Console.Write("connected");
-    //     command = new SqlCommand(sql, connection);
-    //     return "inserted";
-    // }
-
-    // [HttpDelete]
-    // public string DeleteTransaction([FromBody] Command deleteTransaction)
-    // {
-    //     var com = deleteTransaction;
-    //     // Console.WriteLine(deleteTransaction.name);
-    //     SqlCommand command;
-    //     string connectionString = "Data Source=localhost;Initial Catalog=constructionDB;User ID=user;Password=pass";
-    //     string sql = $"INSERT INTO transactions(FirstName,LastName,PhysicalAddress,PhoneNumber,Amount) VALUES('lindokuhle','shabalala', '25 st street',0123456789,5000)";
-    //     var connection = new SqlConnection(connectionString);
-
-
-    //     connection.Open();
-    //     Console.Write("connected");
-    //     command = new SqlCommand(sql, connection);
-    //     return "inserted";
-    // }
+    [HttpDelete("/{transactionID}")]
+    public string DeleteTransaction(int transactionID)
+    {
+        return loanShark.Query.deleteTransaction(transactionID);
+    }
 
     
 

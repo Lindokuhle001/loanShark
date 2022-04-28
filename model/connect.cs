@@ -62,5 +62,18 @@ class Query
         return ConnectToDB(sql);
     }
 
+    public static string UpdateTransaction(loanShark.Table.Transactions transact, int transactionID)
+    {
+        string sql = $"UPDATE transactions set Amount = '{transact.Amount}' where transactionID={transactionID}";
+        return ConnectToDB(sql);
+
+    }
+
+        public static string deleteTransaction( int transactionID)
+    {
+        string sql = $"DELETE FROM transactions where transactionID={transactionID}";
+        return ConnectToDB(sql);
+
+    }
 }
 
